@@ -1,0 +1,43 @@
+# Copyright (c) 2020, The ZMK Contributors
+# SPDX-License-Identifier: MIT
+
+description: GPIO keyboard topre controller
+
+compatible: "zmk,kscan-gpio-topre"
+
+include: kscan.yaml
+
+properties:
+  row-gpios:
+    type: phandle-array
+    required: true
+  col-gpios:
+    type: phandle-array
+    required: true
+  col-select-gpios:
+    type: phandle-array
+    required: true
+  enable-gpios:
+    type: phandle-array
+    required: true
+  hys-gpios:
+    type: phandle-array
+    required: true
+  key-gpios:
+    type: phandle-array
+    required: true
+  led-gpios:
+    type: phandle-array
+    required: true
+  max-row: # limit the rows queried, many keyboards don't use all the rows, 0 does all
+    type: int
+    default: 0
+  active-polling-interval-msec:
+    type: int
+    default: 10
+  idle-polling-interval-msec:
+    type: int
+    default: 30
+  sleep-polling-interval-msec:
+    type: int
+    default: 200

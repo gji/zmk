@@ -1,0 +1,5 @@
+# Copyright (c) 2020 Pete Johanson, Richard Jones
+# SPDX-License-Identifier: MIT
+
+config SHIELD_FC660C
+	def_bool $(shields_list_contains,fc660c)
